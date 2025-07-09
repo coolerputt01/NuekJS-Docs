@@ -1,0 +1,29 @@
+<component>
+    <div class="info-card">
+        <img src="{% cardIcon %}" alt="NuekJs is very SPA friendly">
+        <h2>{% cardTitle %}</h2>
+        <p>{% cardDesc %}</p>
+    </div>
+</component>
+<style>
+.info-card {
+    width: 90vw;
+    padding-bottom: 3em;
+}
+.info-card > img {
+    width: 4em;
+    height: 4em;
+    border-radius: 30%;
+    padding: 0.6em;
+    background: lightgrey;
+}
+.info-card > h2 {
+    font-size: 1.1em;
+    padding-bottom: 0.7em;
+    padding-top: 0.5em;
+}
+.info-card > p {
+    color: grey;
+    width: 85vw;
+}
+</style>

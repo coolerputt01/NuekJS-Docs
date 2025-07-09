@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;
+}
+
+.nav {
+    width: 100vw;
+    height: 7vh;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+}
+.nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    gap: 5%;
+}
+.nav-brand > span {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.nav-img {
+    width: 2.4em;
+    height: 2.4em;
+    mix-blend-mode: multiply;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3.2em;
+}
+
+.hero > div {
+    padding: 1.1em;
+    
+}
+.hero > div > h1 {
+    font-size: 2.3em;
+    padding-bottom: 0.25em;
+}
+.hero > div > h1 > small {
+    color: lightgrey;
+    font-size: 0.7em !important;
+}
+
+.hero > div > p {
+    line-height: 20px;
+    font-size: 0.9em;
+    color: grey;
+}
+.get-started {
+    background-color: #D44A2A;
+    border: none;
+    outline: none;
+    padding: 0.7em;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-left: 2em;
+    padding-right: 2em;
+    border-radius: 7px;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.get-started:hover {
+    background: linear-gradient(-30deg, #D44A2A,#D44A2A,#eeeeee,#D44A2A,#D44A2A );
+}
+.btn-cont > * {
+    margin: 0.3em;
+}
+.btn-cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.copy-btn {
+    width: 1.1em;
+    height: 1.1em;
+}
+.shortcut {
+    background-color: rgba(148, 148, 148, 0.486);
+    padding: 0.4em;
+    border-radius: 5px;
+}
+.shortcut > pre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.why {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1.2em;
+}
+.why > div {
+    padding: 1.1em;
+    width: 100%;
+}
+.why > div > * {
+    margin-bottom: 0.8em;
+}
+.why > div > article {
+line-height: 24px;
+}
+.why > div > article > strong {
+    font-size: 1.3em;
+}
+.why > div > h2 {
+    font-size: 1.1em;
+    text-align: left;
+}
+.card-list {
+    padding-top: 1em;
+}
