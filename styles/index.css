@@ -117,7 +117,6 @@ footer {
     padding: 0.8em;
     width: 100vw;
 }
-
 body::before {
     content: '';
     position: absolute;

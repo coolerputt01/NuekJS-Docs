@@ -64,3 +64,27 @@ nav p {
     color: #cc4223;
     font-size: 1.2em;
 }
+body::before {
+    content: '';
+    position: absolute;
+    right: 45%;
+    top: -15%;
+    width: 200vw;
+    height: 200vw;
+    border-radius: 50%;
+    background-color: #ff2f001a;
+    overflow-x: hidden;
+    z-index: -1;
+}
+body::after {
+    content: '';
+    position: absolute;
+    left: 25%;
+    bottom: 20%;
+    width: 100vw;
+    height: 100vw;
+    border-radius: 50%;
+    background-color: #ff2f001e;
+    overflow-x: hidden;
+    z-index: -1;
+}
