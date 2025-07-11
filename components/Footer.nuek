@@ -1,0 +1,75 @@
+<component>
+<div class="footer-details">
+        <div>
+            <h2>NuekJS</h2>
+            <p>Your goto web component framework</p>
+        </div>
+        <div class="links">
+            <h3>Resources</h3>
+            <a href="#">Docs</a>
+            <a href="#">Tutorial</a>
+            <a href="#">Integration</a>
+        </div>
+    </div>
+    <div>
+        <div class="socials">
+            <img src="../assets/svgs/github.svg" alt="Nuekjs Github link">
+            <img src="../assets/svgs/npm.svg" alt="Nuekjs Npm link">
+        </div>
+    </div>
+    <div>
+        <div class="footer-info">
+            <p>©️Made with love ❤️ by coolerputt</p>
+        </div>
+    </div>
+</component>
+<style>
+    .footer-details {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 2em;
+    width: 100%;
+    padding-bottom: 3em;
+}
+.footer-details > div > h2 {
+    font-size: 1.3em;
+}
+.footer-details > div >  p {
+    color: grey;
+    font-size: 0.8em;
+}
+.footer-details > div > h3 {
+    font-size: 1.1em;
+}
+.footer-details > .links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    line-height: 18px;
+} 
+.footer-info {
+    color: grey;
+    padding: 0.8em;
+}
+.links > a {
+    text-align: left;
+    text-decoration: none;
+    color: #D44A2A;
+    font-size: 0.8em;
+    width: 100%;
+}
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1em;
+}
+.socials > img {
+    width: 1.2em;
+    height: 1.2em;
+}
+</style>

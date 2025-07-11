@@ -19,3 +19,12 @@ const props = {
 const infoCard1 = new NuekComponent('.card-list', './components/InfoCard.nuek',props.props1);
 const infoCard2 = new NuekComponent('.card-list', './components/InfoCard.nuek',props.props2);
 const infoCard3 = new NuekComponent('.card-list', './components/InfoCard.nuek',props.props3);
+const header = new NuekComponent('header','./components/Header.nuek');
+const footer = new NuekComponent('footer','./components/Footer.nuek');
+
+function reDirect(path){
+    document.location.href = path;
+    console.log("How far");
+}
+
+document.querySelector('.get-started').addEventListener("click", () => reDirect("./pages/get-started.html"))

@@ -1,0 +1,36 @@
+<component>
+<nav class="nav">
+    <span class="nav-brand">
+        <img src="../assets/icon/icon.png" alt="NuekJS Icon" class="nav-img">
+        <span>Nuekjs</span>
+    </span>
+</nav>
+</component>
+<style>
+.nav {
+    width: 100vw;
+    height: 7vh;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    width: 100vw;
+}
+.nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    gap: 5%;
+}
+.nav-brand > span {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+.nav-img {
+    width: 2.4em;
+    height: 2.4em;
+    mix-blend-mode: multiply;
+}
+</style>
