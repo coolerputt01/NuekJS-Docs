@@ -1,9 +1,9 @@
 <component>
 <nav class="nav">
-    <span class="nav-brand">
+    <a class="nav-brand" href="../index.html">
         <img src="../assets/icon/icon.png" alt="NuekJS Icon" class="nav-img">
         <span>Nuekjs</span>
-    </span>
+    </a>
 </nav>
 </component>
 <style>
@@ -23,8 +23,8 @@
     align-items: center;
     width: 25%;
     gap: 5%;
-}
-.nav-brand > span {
+    text-decoration: none;
+    color: #000;
     font-size: 1.4em;
     font-weight: 600;
 }

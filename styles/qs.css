@@ -1,0 +1,162 @@
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1.5em;
+  padding: 0.8em;
+  width: 100vw;
+}
+
+/* Article layout */
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+article > h2 {
+  display: flex;
+  justify-content: left;
+  text-align: left;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1.4em;
+  padding: 0.2em;
+  padding-top: 1em;
+  padding-bottom: 0.1em;
+  width: 100%;
+}
+
+h2 > span {
+  color: #ff532b;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+h2:hover span {
+  opacity: 1;
+}
+
+article > p {
+  color: rgb(80, 80, 80);
+  padding: 0.7em;
+  text-align: left;
+  width: 100%;
+}
+
+/* Code block container */
+pre {
+  background: #1c1931f1;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  white-space: pre-wrap;     /* wrap long lines */
+  word-break: break-word;    /* break long words */
+  width: 95%;
+}
+
+/* Code font style */
+pre > code,
+.code {
+  font-family: "Cascadia Code", sans-serif !important;
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 400;
+}
+code {
+  font-family: "Cascadia Code", sans-serif !important;
+}
+
+.token {
+  font-family: "Cascadia Code", sans-serif !important;
+}
+
+/* Prism.js syntax token styling (dark + non-invasive) */
+.token.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.token.keyword {
+  color: #c586c0;
+}
+
+.token.string {
+  color: #ce9178;
+}
+
+.token.tag,
+.token.selector {
+  color: #569cd6;
+}
+
+.token.attr-name {
+  color: #9cdcfe;
+}
+
+.token.attr-value {
+  color: #d69d85;
+}
+
+.token.punctuation {
+  color: #cccccc;
+}
+
+.token.function {
+  color: #dcdcaa;
+}
+/* Tab buttons */
+.tabs {
+  display: flex;
+  gap: 0.5em;
+  margin: 1em 0;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  background: none;
+  border: 1px solid #ff532b;
+  color: #ff532b;
+  padding: 0.4em 1em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tabs button.active {
+  background: #ff532b;
+  color: white;
+}
+
+/* Tab panes */
+.tab-pane {
+  display: none;
+  width: 100%;
+}
+.tab-pane.active {
+  display: block;
+}
+.next {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 4em;
+    padding: 1em;
+}
+.next {
+    border: 0.1px dotted #ff532b;
+}
+.next a {
+    text-decoration: none;
+    color: #ff532b;
+    font-size: 0.95em;
+    line-height: 25px;
+}
+.next p {
+    color: #cc4223;
+    font-size: 1.2em;
+}

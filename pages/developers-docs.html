@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism-tomorrow.min.css">
+        <link rel="stylesheet" href="../styles/main.css">
+        <link rel="stylesheet" href="../styles/dd.css">
+        <title>NuekJS - Get started</title>
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <h1>Developers Docs</h1>
+            <section id="advanced-usage">
+                <h2><span>#</span> Advanced Usage</h2>
+                <p>Here we explore powerful NuekJS features like looping and conditional rendering for building dynamic UIs.</p>
+
+                <h3>🔁 Looping Components</h3>
+                <pre><code class="language-js">new NuekComponent("#cards", "components/Card.nuek", {
+    item: "Bags"
+    }, 3);
+                </code></pre>
+                <p>This will render the <code>Card.nuek</code> component 3 times with the "item" props.</p>
+
+                <h3>✅ Conditional Rendering</h3>
+                <pre><code class="language-js">
+let authCheck = localStorage.getItem("authState") || false;
+const profile = new NuekComponent("#auth", "./components/Profile.nuek", {
+    user: { name: "Coolerputt" },
+    isLoggedIn: authState
+});
+                </code></pre>
+                <p>Only renders if the condition is met.</p>
+            </section>
+
+            <!-- 2. Performance Tips -->
+            <section id="performance">
+                <h2><span>#</span> Performance Tips</h2>
+                <p>Improve render speed and efficiency of your NuekJS apps with the following tips:</p>
+
+                <ul>
+                <li>🧊 Lazy-load assets used in NuekComponents</li>
+                <li>🎯 Use <code>defer</code> or <code>async</code> for the CDN script</li>
+                <li>🧠 Keep props lightweight and flat</li>
+                </ul>
+
+                <pre><code class="language-html">&lt;script type="module" defer src="https://cdn.jsdelivr.net/npm/nuekjs@latest/scripts/main.js"&gt;&lt;/script&gt;</code></pre>
+            </section>
+
+            <!-- 3. Authoring Components -->
+            <section id="authoring">
+                <h2><span>#</span> Authoring Components</h2>
+                <p>NuekJS components use a .nuek format which includes logic, template, and styles:</p>
+
+                <pre><code class="language-html">
+&lt;script&gt;
+    console.log("Nuek Component Script Loaded");
+&lt;/script&gt;
+
+&lt;component&gt;
+    &lt;div class="card"&gt;{{ title }}&lt;/div&gt;
+&lt;/component&gt;
+
+&lt;style&gt;
+/* Component Styles */
+.card {
+    background: #1c1c2e;
+    color: #ff532b;
+    padding: 1em;
+    border-radius: 8px;
+}
+&lt;/style&gt;
+            </code></pre>
+            </section>
+
+            <section id="faq">
+  <h2><span>#</span> Troubleshooting & FAQ</h2>
+  <p>Here are answers to the most common questions developers ask when using NuekJS:</p>
+
+  <input type="search" id="faq-search" placeholder="Search FAQ...">
+
+  <div id="faq-list">
+    <details>
+      <summary>😕 Why isn’t my component rendering?</summary>
+      <p>Ensure the target selector exists in the DOM and the component path is correct. NuekJS only renders after the DOM is loaded, so you may need to defer your script or place it at the end of the body.</p>
+    </details>
+
+    <details>
+      <summary>❌ Why am I getting a 404 on my component file?</summary>
+      <p>Check that the file path is correct, matches your folder structure, and is case-sensitive. Also ensure the file is accessible on your server or CDN.</p>
+    </details>
+
+    <details>
+      <summary>🤔 Can I use NuekJS with React, Vue, or other frameworks?</summary>
+      <p>Yes! You can load NuekJS via CDN to render isolated components outside your framework’s lifecycle. It's useful for embedded widgets or progressive enhancement.</p>
+    </details>
+
+    <details>
+      <summary>📁 Where do I place my .nuek component files?</summary>
+      <p>It’s recommended to keep them in a <code>/components</code> folder relative to your root or entry point. Ensure the path you reference matches this location.</p>
+    </details>
+
+    <details>
+      <summary>📦 Can I use npm instead of CDN?</summary>
+      <p>Yes! Run <code>npm install nuekjs</code> and import it in your build setup (like Vite, Webpack, or ESBuild).</p>
+    </details>
+
+    <details>
+      <summary>🔄 How do I update data inside a Nuek component?</summary>
+      <p>Currently, NuekJS supports initial props but doesn’t support live reactivity. To change data, you’ll need to re-render the component.</p>
+    </details>
+
+    <details>
+      <summary>🚀 Is NuekJS reactive like Vue or Svelte?</summary>
+      <p>No — NuekJS is designed to be a lightweight, one-time-render templating engine, ideal for simple, static, or looped UI blocks. It doesn’t track changes after rendering.</p>
+    </details>
+
+    <details>
+      <summary>📜 What file extension does NuekJS use?</summary>
+      <p>Nuek components use the <code>.nuek</code> extension. Each file contains <code>&lt;script&gt;</code>, <code>&lt;component&gt;</code>, and <code>&lt;style&gt;</code> sections.</p>
+    </details>
+
+    <details>
+      <summary>🧩 Can I nest Nuek components?</summary>
+      <p>Yes — but each component must be rendered independently with its own <code>NuekComponent()</code> call. NuekJS doesn’t support automatic child parsing yet.</p>
+    </details>
+
+    <details>
+      <summary>🌐 Does NuekJS support server-side rendering (SSR)?</summary>
+      <p>Not currently. NuekJS is a client-side component loader meant for fast frontend usage. However, you could manually pre-render components on the server if needed.</p>
+    </details>
+  </div>
+</section>
+
+            <!-- 5. Examples / Showcase -->
+            <section id="examples">
+                <h2><span>#</span> Examples & Showcase</h2>
+                <p>Here are real-world use cases and starter templates:</p>
+
+                <div>
+                    <p>None available for now.</p>
+                </div>
+                </div>
+            </section>
+            </main>
+        <footer>
+        </footer>
+        <script type="module" src="https://cdn.jsdelivr.net/npm/nuekjs@latest/scripts/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-html.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-jsx.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-typescript.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+    <script src="../scripts/dd.js" type="module">
+
+    </script>
+    </body>
+</html>
