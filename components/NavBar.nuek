@@ -1,0 +1,49 @@
+<style>
+ .brand {
+  color: #ff532b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.5em;
+  text-align: left;
+}
+
+/* NAV */
+ nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ nav ul li {
+  margin-bottom: 0.6em;
+}
+
+ nav ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  padding: 0.6em 1em;
+  display: block;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+ nav ul li a:hover,
+ nav ul li a.active {
+  background: #ff532b1a;
+  color: #fff;
+}
+</style>
+
+<component>
+  <div class="brand">NuekJS Docs</div>
+  <nav>
+    <ul>
+      <li><a href="#advanced-usage">Advanced Usage</a></li>
+      <li><a href="#performance">Performance</a></li>
+      <li><a href="#authoring">Authoring</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#examples">Examples</a></li>
+    </ul>
+  </nav>
+</component>
