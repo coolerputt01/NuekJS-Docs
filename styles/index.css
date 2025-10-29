@@ -1,132 +1,95 @@
-.hero {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 3.2em;
+.mainView {
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.hero > div {
-    width: 100%;
-    padding: 1.1em;
+.mainView::after {
+  content: "";
+  position: fixed;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  background: radial-gradient(circle, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+  z-index:10;
 }
-.hero > div > h1 {
-    font-size: 2.3em;
-    padding-bottom: 0.25em;
-    text-align: left;
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  padding: 1em;
+  background: transparent;
+  z-index: 100;
 }
-.hero > div > h1 > small {
-    color: lightgrey;
-    font-size: 0.7em !important;
+.icon {
+  display: inline-block;
+  filter: drop-shadow(0 0 15px #fff);
+}
+.hero-text {
+  position: absolute;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.7em;
+  width: 70%;
+  top: 8em;
+  left: 2em;
+  transition: transform 0.1s linear;
+}
+.hero-text > * {
+  width: 100%;
+  text-align: left;
+  color: #fff;
+}
+.hero-text > h1 {
+  color: #fff;
+  font-size: 2.7em;
+  letter-spacing: 2px;
+  text-align: left;
+  text-shadow: -6px -6px grey, -5px -5px grey,
+    -4px -4px grey, -3px -3px grey, -2px -2px grey;
+  width: 100%;
 }
 
-.hero > div > p {
-    line-height: 20px;
-    font-size: 0.9em;
-    color: grey;
+button.demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
-.get-started {
-    background-color: #D44A2A;
-    border: none;
-    outline: none;
-    padding: 0.7em;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+button.demo img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+}
+.hero-text > p {
+  background: linear-gradient(90deg, #fff, lightgrey, #fffaaa) -100%/ 200%;
 
-    padding-left: 2em;
-    padding-right: 2em;
-    border-radius: 7px;
-    color: #eee;
-    cursor: pointer;
-    transition: all 0.3s;
+	-webkit-background-clip: text;
+	        background-clip: text;
+	color: transparent;
+	animation: shimmer 2s linear infinite
 }
-.get-started:hover {
-    background: linear-gradient(-30deg, #D44A2A,#D44A2A,#eeeeee,#D44A2A,#D44A2A );
+
+@keyframes shimmer { to { background-position: 100% } }
+.button-container > button {
+  width: 50%;
+  text-align: center !important;
+  border-radius: 50px;
+  padding: 13px;
+  border: none;
+  outline: none;
+  font-size: 0.7em;
 }
-.btn-cont > * {
-    margin: 0.3em;
-}
-.btn-cont {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-.copy-btn {
-    width: 1.1em;
-    height: 1.1em;
-}
-.shortcut {
-    background-color: rgba(148, 148, 148, 0.486);
-    padding: 0.4em;
-    border-radius: 5px;
-}
-.shortcut > pre {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-aside > .super-hero {
-    max-width: 40vw;
-    max-height: 50vh;
-    padding-top: 3em;
-    padding-bottom: 2.5em;
-}
-.why {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 1.2em;
-}
-.why > div {
-    padding: 1.1em;
-    width: 100%;
-}
-.why > div > * {
-    margin-bottom: 0.8em;
-}
-.why > div > article {
-line-height: 24px;
-}
-.why > div > article > strong {
-    font-size: 1.3em;
-}
-.why > div > h2 {
-    font-size: 1.2em;
-    text-align: left;
-    padding-bottom: 0.2em;
-    color: #ff532b;
-}
-.card-list {
-    padding-top: 1em;
-}
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 1.5em;
-    padding: 0.8em;
-    width: 100vw;
-}
-body::before {
-    content: '';
-    position: absolute;
-    right: -30%;
-    top: -6%;
-    width: 100vw;
-    height: 100vw;
-    border-radius: 50%;
-    background-color: #ff2f0025;
-    overflow-x: hidden;
-    z-index: -1;
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
 }

@@ -11,54 +11,29 @@
     <meta property="og:title" content="NuekJS - Your Lively Component Framework">
     <meta property="og:description" content="Build components without complex bundling or magic. Use NuekJS with plain HTML, Vue, React, or Astro.">
     <meta property="og:image" content="https://nuekjs-docs.onrender.com/assets/icon.png">
-    <link rel="icon" href="/assets/icon/icon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/main.css">
     <title>NuekJS - Your Lively component framework</title>
 </head>
 <body>
-    <header>
-        
-    </header>
-    <main>
-        <section class="hero">
-            <div>
-                <h1>NuekJs <small>1.2.0</small></h1>
-                <p>Your very own Nue inspired , HTML intrigued and other framework supported , framework (PS: I'm not the best English Spokesman)</p>
+    <main class="mainView">
+        <header>
+            <img class="icon" src="./assets/svgs/github.svg" alt="Nuek Github Icon" width="32" height="32"/>
+        </header>
+        <div class="hero-text">
+            <h1>NuekJS</h1>
+            <p>JS component framework...</p>
+            <div class="button-container">
+                <button style="background: #ff532b;color: #fff;box-shadow: rgba(255, 255, 255, 0.4) 0px 5px, rgba(255, 255, 255, 0.3) 0px 10px, rgba(255, 255, 255, 0.2) 0px 15px;">Get Started</button>
+                <button class="demo">View Demo <img src="./assets/svgs/demo.svg" alt="Nuek Demo Icon" width="18" height="18"/></button>
             </div>
-            <div class="btn-cont">
-                <button class="get-started">
-                    Get started
-                </button>
-                <div class="shortcut">
-                    <pre> 👉🏽 npm install nuekjs <img src="./assets/svgs/copy.svg" alt="Copy SVG" class="copy-btn"></pre>
-                </div>
-            </div>
-        </section>
-        <aside>
-            <img src="/assets/cosplay/nuek-character_4772.gif" alt="NuekJS hero" class="super-hero" autoplay="true">
-        </aside>
-        <section class="why">
-            <div>
-                <h2>What and Why Nuekjs?</h2>
-                <article>
-                    <strong>NuekJs</strong> is a JS client-side component framework for creating reusable components without any  deep abstractions or bundling.
-                </article>
-                <div class="card-list">
-
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
-    <footer>
-        
-    </footer>
     <script type="module" src="https://cdn.jsdelivr.net/npm/nuekjs@latest/scripts/main.js"></script>
-    <script src="scripts/index.js" type="module">  
-
+    <script type="module" src="./scripts/index.js" >
     </script>
 </body>
 </html>
