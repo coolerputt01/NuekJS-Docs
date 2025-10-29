@@ -1,0 +1,65 @@
+.mainContainer {
+	overflow:hidden;
+	width: 100vw;
+	height: auto;
+	position: relative;
+	padding: 1.3em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: #ff532b;
+}
+.mainContainer > * {
+	text-align: left;
+	width: 100%;
+}
+h1 {
+	color: #eee;
+}
+.break {
+	width: 90vw;
+	text-align: center;
+	margin-bottom: 1.2em;
+	margin-top: 1.2em;
+}
+article {
+	margin-top: 4em;
+	color: white ;
+}
+article > p {
+	font-size: 0.7em;
+	color: lightgrey;
+	letter-spacing: 0.08em;
+	margin-top: 1.8em;
+	line-height: 16px;
+}
+b {
+	color: #fff !important;
+}
+figure {
+	margin-top: 3em;
+}
+pre {
+	font-family: "Luckiest Guy" !important;
+	position: relative;
+}
+figure pre::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+code {
+	font-family: "Luckiest Guy" !important;
+	font-size: 0.7em !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}

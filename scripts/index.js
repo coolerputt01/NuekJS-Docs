@@ -7,6 +7,9 @@ const canvasEl = container; // we append renderer.domElement into this container
 // Scene
 const scene = new THREE.Scene();
 scene.background = new THREE.Color(0xFF532B);
+const parallaxIntensity = 0.2;
+let targetCameraX = 0;
+let targetCameraY = 0;
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
@@ -24,14 +27,20 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 container.appendChild(renderer.domElement);
 
 // Lights
-const ambientLight = new THREE.AmbientLight(0xff532b, 3);
+const ambientLight = new THREE.AmbientLight(0xff532b, 1);
 scene.add(ambientLight);
 
 const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
 directionalLight.position.set(5, 10, 7.5);
 scene.add(directionalLight);
+// --- Moving lights setup ---
+const movingLight1 = new THREE.PointLight(0xffffff, 1, 10);
+const movingLight2 = new THREE.PointLight(0xffaa33, 1, 10);
 
-let mixer, model;
+scene.add(movingLight1);
+scene.add(movingLight2);
+
+let model;
 const clock = new THREE.Clock();
 
 // Load GLTF model
@@ -50,10 +59,12 @@ loader.load('./assets/cosplay/Cosplay.glb',
     
     scene.add(model);
     
-    if (gltf.animations && gltf.animations.length) {
-      mixer = new THREE.AnimationMixer(model);
-      gltf.animations.forEach((clip) => mixer.clipAction(clip).play());
-    }
+    model.traverse(obj => {
+      if (obj.isMesh) {
+        obj.material.emissive = new THREE.Color(0xff532b); // warm glow color
+        obj.material.emissiveIntensity = 0.3; // tweak 0.2–0.6
+       }
+    });
   },
   undefined,
   (error) => {
@@ -198,7 +209,12 @@ container.addEventListener('touchend', (e) => {
     isDragging = false;
   }
 });
-
+window.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 2;
+  const y = (e.clientY / window.innerHeight - 0.5) * 2;
+  targetCameraX = x * parallaxIntensity;
+  targetCameraY = -y * parallaxIntensity;
+});
 // helper
 function getDistance(a, b) {
   const dx = a.clientX - b.clientX;
@@ -211,7 +227,6 @@ function animate() {
   requestAnimationFrame(animate);
   
   const delta = clock.getDelta();
-  if (mixer) mixer.update(delta);
   
   updateHeroTextScale();
   
@@ -239,7 +254,15 @@ function animate() {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
   }
-  
+  const t = performance.now() * 0.001; // time in seconds
+
+  // orbiting motion
+  movingLight1.position.set(Math.sin(t) * 3, Math.cos(t * 1.3) * 2, Math.cos(t * 0.8) * 3);
+  movingLight2.position.set(Math.sin(t * 0.7) * -3, Math.cos(t * 1.1) * 1.5, Math.sin(t * 0.6) * 2);
+  // Smooth parallax camera movement
+  camera.position.x += (targetCameraX - camera.position.x) * 0.05;
+  camera.position.y += (targetCameraY - camera.position.y) * 0.05;
+  camera.lookAt(scene.position);
   renderer.render(scene, camera);
 }
 animate();

@@ -3,6 +3,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  filter: drop-shadow(0 0 10px rgba(255, 83, 43, 0.5)) brightness(1.05);
 }
 .mainView::after {
   content: "";
@@ -27,7 +28,7 @@ header {
 }
 .icon {
   display: inline-block;
-  filter: drop-shadow(0 0 15px #fff);
+  filter: drop-shadow(0 0 15px #fff) drop-shadow(0 0 15px #fff);
 }
 .hero-text {
   position: absolute;
@@ -57,16 +58,21 @@ header {
 }
 
 button.demo {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
+}
+.button.demo > * {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 button.demo img {
-  vertical-align: middle;
-  display: inline-block;
+  display: block;
   width: 18px;
   height: 18px;
+  transform: translateY(-2px);
 }
 .hero-text > p {
   background: linear-gradient(90deg, #fff, lightgrey, #fffaaa) -100%/ 200%;

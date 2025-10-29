@@ -1,36 +1,20 @@
 <component>
-<nav class="nav">
-    <a class="nav-brand" href="../index.html">
-        <img src="../assets/icon/icon.png" alt="NuekJS Icon" class="nav-img">
-        <span>Nuekjs</span>
-    </a>
-</nav>
+    <header>
+        <img class="icon" src="../assets/svgs/github-black.svg" alt="Nuek Github Icon" width="32" height="32" />
+    </header>
 </component>
 <style>
-.nav {
-    width: 100vw;
-    height: 7vh;
-    padding: 2em;
+header {
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
-    height: 8vh;
-    width: 100vw;
+    width: 100%;
+    padding: 1em;
+    background: #ff532b;
+    z-index: 100;
 }
-.nav-brand {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25%;
-    gap: 5%;
-    text-decoration: none;
-    color: #000;
-    font-size: 1.4em;
-    font-weight: 600;
-}
-.nav-img {
-    width: 2.4em;
-    height: 2.4em;
-    mix-blend-mode: multiply;
+.icon {
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(255, 83, 43, 0.5)) drop-shadow(0 0 10px rgba(255, 83, 43, 0.5)) brightness(1.05);
 }
 </style>
