@@ -11,10 +11,10 @@ header {
     width: 100%;
     padding: 1em;
     background: #ff532b;
-    z-index: 100;
+    z-index: 1000;
 }
 .icon {
     display: inline-block;
-    filter: drop-shadow(0 0 10px rgba(255, 83, 43, 0.5)) drop-shadow(0 0 10px rgba(255, 83, 43, 0.5)) brightness(1.05);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.2)) brightness(1.05);
 }
 </style>

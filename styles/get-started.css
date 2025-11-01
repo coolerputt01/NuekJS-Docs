@@ -10,9 +10,33 @@
 	flex-direction: column;
 	background: #ff532b;
 }
+.mainContainer::after {
+	 content: '';
+	 position: absolute;
+	 width: 70vw;
+	 background: lightyellow;
+	 height: 180vh;
+	 transform: rotate(39deg);
+	 top: -25em;
+	 right: 0;
+	 opacity: 0.2;
+}
+
+.mainContainer::before {
+	 content: '';
+	 position: absolute;
+	 width: 70vw;
+	 background: lightyellow;
+	 height: 180vh;
+	 transform: rotate(-39deg);
+	 top: 38em;
+	 right: 0;
+	 opacity: 0.2;
+}
 .mainContainer > * {
 	text-align: left;
 	width: 100%;
+	z-index: 100;
 }
 h1 {
 	color: #eee;
@@ -38,13 +62,17 @@ b {
 	color: #fff !important;
 }
 figure {
-	margin-top: 3em;
+	margin-top: 2em;
+	color: #fff;
+}
+.figure {
+	position: relative;
 }
 pre {
 	font-family: "Luckiest Guy" !important;
 	position: relative;
 }
-figure pre::before {
+figure .language-markup::before {
   content: attr(data-language);
   position: absolute;
   top: 8px;
@@ -57,9 +85,69 @@ figure pre::before {
   border-radius: 5px;
   text-transform: uppercase;
 }
+.figure::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+ 
+  z-index: 1000;
+}
 code {
 	font-family: "Luckiest Guy" !important;
 	font-size: 0.7em !important;
 	padding: 0 !important;
 	margin: 0 !important;
+}
+li {
+	color: lightgray;
+	font-size: 0.8em;
+	line-height: 18px;
+	margin-top: 1.3em;
+}
+li > b {
+	font-size: 1.4em !important;
+	letter-spacing: 3px;
+}
+.nil {
+	margin-top: 0 !important;
+}
+.hover {
+	opacity: 0;
+	transition: all 750ms;
+}
+h1:hover > .hover {
+		opacity: 1;
+}
+.info {
+	color: #fff;
+	font-size: 0.8em;
+	margin-top: 1.5em;
+	letter-spacing: 1px;
+	text-align: center;
+}
+nav {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin-top: 3em;
+}
+.next {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.6em;
+	width: 50vw;
+	padding: 15px;
+	border-radius: 8px;
+		border: 3px dotted #fff;
+	color: #fff;
+	text-decoration: none;
 }

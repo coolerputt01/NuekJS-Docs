@@ -19,7 +19,7 @@
   </span>
   <main class="mainContainer">
     <section class="text-content">
-      <h1>Introduction</h1>
+      <h1> <span class="hover">#</span> Introduction</h1>
       <div class="break">
         <hr />
       </div>
@@ -38,7 +38,40 @@
 &lt;/script&gt;
   </code></pre>
 </figure>
+
+
+<figure data-language=".js" class="code-example figure">
+  <pre ><code class="language-js">
+    // Initialise Component...
+    const component = new NuekStaticComponent('.card-container', "../components/Card.nuek", null, 1, true, false);
+    component.condition = false;
+  </code></pre>
+</figure>
+<figure>
+      <figcaption>
+        Result:
+      </figcaption>
+      <div>
+        <img src="../assets/images/result1.jpg" width="326" height="96" alt="Result" style="border-radius: 8px;">
+      </div>
+    </figure>
+    
+    <p>From this code, we can see how Nuekjs works and the core mechanisms that it builds on/makes it up...</p>
       </article>
+    <article class="nil">
+      <ul>
+         <li><b>Templating System:</b> Nuekjs allows markup representation through a simple and intuitive templating system for each component in Single File Components(SFCs).</li>
+         <li><b>Resuability:</b> Nuekjs allows its components to be reused across the codebase, so you can store this component data in a variable and reference later across your codebase.</li>
+         <li><b>Reactivity and Props:</b> Nuekjs's PropComponents allow for a dynamic flow of data in the components either static or dynamic and  DynamicComponents compliment this and every other feature by making component data States reactive.</li>
+         <li><b>Server Side Rendering(SSR):</b> Nuekjs supports optional SSR features to it's components to improve state of data across your application.</li>
+      </ul>
+    </article>
+    <p class="info">If you have any questions at this point, please continue reading or look through the documentation for more information...</p>
+    <nav>
+      <a href="next" class="next">
+        <span>Quick Start</span><img src="../assets/svgs/right.svg" alt="Right Arrow" width="18" height="18"/>
+      </a>
+    </nav>
     </section>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
