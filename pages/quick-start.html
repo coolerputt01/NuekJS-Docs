@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NuekJS - Quick Start</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/get-started.css" />
+</head>
+
+<body>
+  <span class="header">
+  
+  </span>
+  <main class="mainContainer">
+    <section class="text-content">
+      <h1> <span class="hover">#</span> Quick Start</h1>
+      <div class="break">
+        <hr />
+      </div>
+      <article>
+        <h3>Creating a Nuek Component</h3>
+        <p>In this section, I would be putting you through on how to create and use a basic Nuek Component in your app.</p>
+        <h2>Using npm/pnpm</h2>
+        <figure class="code-example figures" data-language="bash">
+          <figcaption>Write this in your command line:</figcaption>
+          <pre ><code class="language-bash">
+            npm install nuekjs
+          </code></pre>
+        </figure>
+        <p>You should now have Nuekjs installed on your project. To create a new Nuek component, let's create a JS file and instance a NuekComponentObject().</p>
+        <figure data-language=".js" class="code-example figure">
+  <pre ><code class="language-js">
+    import { NuekStaticComponent } from 'nuekjs';
+    // Instance new Nuek Component
+    // Static Component...
+    // NuekStaticComponent("CSS Selector of parent container","path to Nuek file", propsObject, loopCount, showCondition, SSRCondition);
+    const nuek_component = new NuekStaticComponent('.card-container', "../components/Card.nuek", null, 1, true, false);
+  </code></pre>
+</figure>
+<p>
+  Now you need to create the NuekJS component to that filePath...
+</p>
+<figure class="code-example">
+  <pre data-language=".nuek"><code class="language-markup">
+&lt;component&gt;
+    &lt;h1&gt;Demo Component &lt;/h1&gt;
+&lt;/component&gt;
+  </code></pre>
+</figure>
+      </article>
+      <article class="nil">
+        <ul>
+          <li><b>Templating System:</b> Nuekjs allows markup representation through a simple and intuitive templating system for each component in Single File Components(SFCs).</li>
+          <li><b>Resuability:</b> Nuekjs allows its components to be reused across the codebase, so you can store this component data in a variable and reference later across your codebase.</li>
+          <li><b>Reactivity and Props:</b> Nuekjs's PropComponents allow for a dynamic flow of data in the components either static or dynamic and DynamicComponents compliment this and every other feature by making component data States reactive.</li>
+          <li><b>Server Side Rendering(SSR):</b> Nuekjs supports optional SSR features to it's components to improve state of data across your application.</li>
+        </ul>
+      </article>
+      <p class="info">If you have any questions at this point, please continue reading or look through the documentation for more information...</p>
+      <nav>
+        <a href="next" class="next">
+          <span>Quick Start</span><img src="../assets/svgs/right.svg" alt="Right Arrow" width="18" height="18" />
+        </a>
+      </nav>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/nuekjs@latest/scripts/main.js"></script>
+  <script type="module" src="../scripts/get-started.js">
+  </script>
+</body>
+
+</html>

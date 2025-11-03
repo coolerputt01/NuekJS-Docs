@@ -68,6 +68,9 @@ figure {
 .figure {
 	position: relative;
 }
+.figures{
+	position: relative;
+}
 pre {
 	font-family: "Luckiest Guy" !important;
 	position: relative;
@@ -100,6 +103,21 @@ figure .language-markup::before {
  
   z-index: 1000;
 }
+.figures::before {
+  content: attr(data-language);
+  position: absolute;
+  top: 32px;
+  right: 12px;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+ 
+  z-index: 1000;
+}
 code {
 	font-family: "Luckiest Guy" !important;
 	font-size: 0.7em !important;
@@ -114,7 +132,7 @@ li {
 }
 li > b {
 	font-size: 1.4em !important;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 }
 .nil {
 	margin-top: 0 !important;
@@ -146,8 +164,7 @@ nav {
 	gap: 0.6em;
 	width: 50vw;
 	padding: 15px;
-	border-radius: 8px;
-		border: 3px dotted #fff;
+	border: 3px dotted lightgrey;
 	color: #fff;
 	text-decoration: none;
 }
