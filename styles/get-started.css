@@ -12,7 +12,7 @@
 }
 .mainContainer::after {
 	 content: '';
-	 position: absolute;
+	 position: fixed;
 	 width: 70vw;
 	 background: lightyellow;
 	 height: 180vh;
@@ -20,19 +20,9 @@
 	 top: -25em;
 	 right: 0;
 	 opacity: 0.2;
+	 background-position: fixed;
 }
 
-.mainContainer::before {
-	 content: '';
-	 position: absolute;
-	 width: 70vw;
-	 background: lightyellow;
-	 height: 180vh;
-	 transform: rotate(-39deg);
-	 top: 38em;
-	 right: 0;
-	 opacity: 0.2;
-}
 .mainContainer > * {
 	text-align: left;
 	width: 100%;
@@ -72,7 +62,7 @@ figure {
 	position: relative;
 }
 pre {
-	font-family: "Luckiest Guy" !important;
+	font-family: "Pangolin" !important;
 	position: relative;
 }
 figure .language-markup::before {
@@ -119,7 +109,7 @@ figure .language-markup::before {
   z-index: 1000;
 }
 code {
-	font-family: "Luckiest Guy" !important;
+	font-family: "Pangolin" !important;
 	font-size: 0.7em !important;
 	padding: 0 !important;
 	margin: 0 !important;
@@ -167,4 +157,12 @@ nav {
 	border: 3px dotted lightgrey;
 	color: #fff;
 	text-decoration: none;
+}
+.bottom {
+	color: #fff;
+	margin-top: 2em;
+}
+.bottom > p {
+	color: lightgrey;
+	font-size: 0.8em;
 }

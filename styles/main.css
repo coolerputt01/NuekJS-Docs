@@ -1,9 +1,17 @@
+@font-face {
+  font-family: "Dina";
+  src: url("../assets/fonts/Dina.woff2") format("woff2");
+  font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Luckiest Guy";
+    font-family: "Dina";
 }
+
 body,html{
+    font-family: "Dina" !important;
     overflow-x: hidden;
 }
